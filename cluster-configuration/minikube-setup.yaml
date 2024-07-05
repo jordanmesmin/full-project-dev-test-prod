@@ -1,0 +1,11 @@
+```yaml
+# Minikube setup script for a multi-node cluster
+# This script should be executed manually in the terminal
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minikube-setup
+  namespace: kube-system
+data:
+  setup: |
+    minikube start --nodes 3 --cni=calico

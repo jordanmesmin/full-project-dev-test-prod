@@ -1,0 +1,27 @@
+pipeline:
+  agent any
+  stages:
+    - stage('Build') {
+        steps {
+          script {
+            echo 'Building application for Production...'
+            // Commandes pour construire l'application
+          }
+        }
+      }
+    - stage('Test') {
+        steps {
+          script {
+            echo 'Running tests for Production...'
+            // Commandes pour exécuter les tests
+          }
+        }
+      }
+    - stage('Deploy') {
+        steps {
+          script {
+            echo 'Deploying to Production...'
+            // Commandes pour déployer l'application dans l'environnement de production
+          }
+        }
+      }
