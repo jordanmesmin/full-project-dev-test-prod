@@ -1,30 +1,30 @@
 pipeline {
-  agent any
+    agent any  // Indique que le pipeline peut s'exécuter sur n'importe quel agent disponible
 
-  stages{
-    - stage('Build') {
-        steps {
-          script {
-            echo 'Building application for Testing...'
-            // Commandes pour construire l'application
-          }
+    stages {
+        stage('Build') {  // Définition de la première étape du pipeline
+            steps {
+                script {
+                    echo 'Building application for Testing...'  // Message affiché dans les logs
+                    // Ajoutez ici les commandes nécessaires pour construire l'application
+                }
+            }
         }
-      }
-    - stage('Test') {
-        steps {
-          script {
-            echo 'Running tests for Testing...'
-            // Commandes pour exécuter les tests
-          }
+        stage('Test') {  // Définition de la deuxième étape du pipeline
+            steps {
+                script {
+                    echo 'Running tests for Testing...'  // Message affiché dans les logs
+                    // Ajoutez ici les commandes nécessaires pour exécuter les tests
+                }
+            }
         }
-      }
-    - stage('Deploy') {
-        steps {
-          script {
-            echo 'Deploying to Testing...'
-            // Commandes pour déployer l'application dans l'environnement de test
-          }
+        stage('Deploy') {  // Définition de la troisième étape du pipeline
+            steps {
+                script {
+                    echo 'Deploying to Testing...'  // Message affiché dans les logs
+                    // Ajoutez ici les commandes nécessaires pour déployer l'application dans l'environnement de test
+                }
+            }
         }
-      }
-  }
+    }
 }
